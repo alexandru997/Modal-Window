@@ -1,0 +1,78 @@
+.amodal {
+}
+
+.amodal.open .modal__overlay,
+.amodal.open .modal__window {
+  opacity: 1;
+  z-index: 20;
+}
+
+
+.amodal.hiden .modal__overlay,
+.amodal.hiden .modal__window {
+  opacity: 1;
+  z-index: 20;
+}
+
+.amodal.open .modal__window {
+  transform: translateY(100px);
+}
+
+.amodal.open .modal__overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.amodal.hiden .modal__window {
+  transform: translateY(-200px);
+}
+
+.amodal.hiden .modal__overlay {
+  background: rgba(0, 0, 0, 0);
+}
+
+.modal__window,
+.modal__overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s ease-in;
+}
+
+.modal__window {
+  width: 600px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 auto;
+  transform: translateY(-200px);
+  transition: transform 0.2s ease-in;
+}
+
+.modal__header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.modal__title {
+  font-size: 1.5rem;
+}
+.modal__close {
+  cursor: pointer;
+}
+.modal__body {
+  padding: 10px;
+  margin: 0 0 5px;
+}
+.modal__footer {
+  padding: 5px 10px;
+  border-top: 1px solid rgb(240, 240, 240);
+}
